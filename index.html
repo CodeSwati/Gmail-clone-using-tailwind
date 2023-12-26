@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gmail clone using tailwind css</title>
+	  <script src="https://cdn.tailwindcss.com"></script>
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+
+	<!-- ----------------------navbar ------------------------------------ -->
+
+	<div class="flex justify-between h-17 items-center w-screen px-6 py-2 bg-slate-100 fixed top-0 z-20">
+		
+		<div class="flex justify-center items-center space-x-2">
+			<span class="material-symbols-outlined">menu</span>
+			<img src="https://1000logos.net/wp-content/uploads/2021/05/Gmail-logo.png" class="h-7 w-16 ">
+			<h2 class="text-2xl font-medium  text-slate-500 hidden md:block">Gmail</h2>
+		</div>
+
+		<div class="flex justify-between items-center border rounded-full py-1.5 px-4 bg-slate-200  ">
+			<div class="flex gap-3">
+			<span class="material-symbols-outlined text-2xl">search</span>
+			<input type="search" placeholder="Search in emails" class="hidden md:block focus:border-0 focus:outline-0 bg-slate-200 w-[500px] ">
+		    </div>
+			<span class="material-symbols-outlined hidden md:block">tune</span>
+			
+		</div>
+
+		<div class="flex justify-center items-center space-x-7">
+			<div class="flex justify-center items-center border rounded-full bg-slate-200 space-x-1 px-2">
+				<span class="text-green-700 text-4xl pb-2">&#x2022; </span>
+				<p class="text-sm font-medium">Active</p>
+				<span class="material-symbols-outlined text-lg">expand_more</span>
+			</div>
+			<span class="material-symbols-outlined">help</span>
+			<span class="material-symbols-outlined">settings</span>
+			<span class="material-symbols-outlined">apps</span>
+			<h2 class="h-9 w-9 border text-xl rounded-full shadow-md text-center font-semibold">S</h2>
+		</div>
+
+	</div>
+
+
+	<!-- --------------------main left aside-------------------------------- -->
+
+	<div class="flex flex-col items-center bg-slate-200 w-24 h-screen fixed top-[60px] p-3 space-y-4">
+		<div class="flex flex-col items-center text-base">
+		<span class="material-symbols-outlined text-2xl">mail</span>
+		<p class="text-sm">Mail</p>
+	    </div>
+
+	    <div class="flex flex-col items-center">
+		<span class="material-symbols-outlined text-2xl">tooltip</span>
+		<p class="text-sm">Chat</p>
+	    </div>
+
+	    <div class="flex flex-col items-center">
+		<span class="material-symbols-outlined text-2xl">groups</span>
+		<p class="text-sm">Spaces</p>
+	    </div>
+
+	    <div class="flex flex-col items-center">
+		<span class="material-symbols-outlined text-2xl">videocam</span>
+		<p class="text-sm">Meet</p>
+	    </div>
+	</div>
+
+	<!-- ---------------------main middle aside-------------------------------- -->
+
+
+		<div class="flex flex-col items-start h-screen p-3 space-y-4 fixed top-[60px] left-24 bg-slate-100 w-64 ">
+			<div class="flex items-center gap-2 bg-blue-200 border rounded-2xl py-4 px-6 ">
+				<span class="material-symbols-outlined">edit</span>
+				<p >Compose</p>
+			</div>
+
+			<div class="flex gap-2 border rounded-full py-[1px] bg-slate-300 w-full  px-4">
+				<span class="material-symbols-outlined  text-xl">inbox</span>
+				<p class="text-base">Index</p>
+			</div>
+
+			<div class="flex gap-2  hover:rounded-full py-[1px] hover:bg-gray-200 w-full text-base px-4">
+				<span class="material-symbols-outlined text-xl">star</span>
+				<p class="text-base">Starred</p>
+			</div>
+
+			<div class="flex gap-2  hover:rounded-full py-[1px] hover:bg-gray-200 w-full text-base px-4">
+				<span class="material-symbols-outlined text-xl">schedule</span>
+				<p class="text-base">Snoozed</p>
+			</div>
+
+			<div class="flex gap-2 hover:rounded-full py-[1px] hover:bg-gray-200 w-full text-base px-4">
+				<span class="material-symbols-outlined">send</span>
+				<p class="text-base">Sent</p>
+			</div>
+
+			<div class="flex gap-2  hover:rounded-full py-[1px] hover:bg-gray-200 w-full text-base px-4">
+				<span class="material-symbols-outlined text-xl">draft</span>
+				<p class="text-base">Draft</p>
+			</div>
+
+			<div class="flex gap-2  hover:rounded-full py-[1px] hover:bg-gray-200 w-full text-base px-4">
+				<span class="material-symbols-outlined text-xl">expand_more</span>
+				<p class="text-base">More</p>
+			</div>
+
+		    <div class="flex justify-between w-full px-4 ">
+				<h2 class="text-lg font-medium">Lables</h2>
+				<img src="https://fonts.gstatic.com/s/i/googlematerialicons/add/v21/black-24dp/1x/gm_add_black_24dp.png" class="h-4 w-4">
+			</div>
+				
+			<div class="flex px-4 gap-2 hover:rounded-full hover:bg-gray-200 w-full">
+				<span class="material-symbols-outlined text-xl">bookmark</span>
+				<p class="text-base">Scrum</p>
+			</div>
+		</div>
+
+		<!-- -------------------main section navbar ------------------------ -->
+
+		<div class="flex justify-between mt-[5px] h-[20px] bg-white z-10 fixed top-[60px] left-[352px] right-16 p-6 
+		border-t-4  border-t-slate-100 rounded-t-2xl ">
+
+			<div class="flex space-x-5 items-center">
+				<div>
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-lg">expand_more</span>
+				</div>
+				<span class="material-symbols-outlined text-xl">autorenew</span>
+				<span class="material-symbols-outlined text-xl">more_vert</span>
+			</div>
+
+			<div class="flex space-x-6 items-center hidden md:flex">
+				<p class="text-xs font-medium">1-50 of 550</p>
+				<div class="flex space-x-4">
+					<span class="material-symbols-outlined text-xl">chevron_left</span>
+					<span class="material-symbols-outlined text-xl">chevron_right</span>
+				</div>
+
+				<div>
+					<span class="material-symbols-outlined text-xl">capture</span>
+					<span class="material-symbols-outlined text-xl">expand_more</span>
+				</div>
+			</div>
+			
+		</div>
+
+
+		<!-- ------------------------------main section scrolling body---------------------------------------- -->
+
+		<div class="flex flex-col absolute top-[130px] left-[352px] w-[950px]  overscroll-y-scroll">
+			<div class="flex space-x-6 px-6">
+
+				<div class="flex items-center space-x-4 border-b-4 border-b-indigo-500 rounded w-52 py-2 text-indigo-600">
+					<span class="material-symbols-outlined text-lg">inventory_2</span>
+					<p class="text-sm font-medium">Primary</p>
+				</div>
+
+				<div class="flex items-center space-x-4 w-52 py-2">
+					<span class="material-symbols-outlined text-lg">sell</span>
+					<p class="text-sm font-medium">Promotions</p>
+				</div>
+
+				<div class="flex items-center space-x-4 w-52 py-2">
+					<span class="material-symbols-outlined text-lg">report</span>
+					<p class="text-sm font-medium">Updates</p>
+				</div>
+				
+			</div>
+
+
+			<!------------------  -->
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600">15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600">15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600">15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600">15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600">15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600">15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600" >15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600" >15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600" >15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 outline-0 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600" >15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600" >15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600" >15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600" >15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600" >15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600" >15:00</p>
+
+			</div>
+
+			<div class="flex justify-between items-center px-6 py-1 bg-slate-100 border-b-[1px] border-slate-300">
+				<div class="flex items-center space-x-4">
+					<span class="material-symbols-outlined text-lg">check_box_outline_blank</span>
+					<span class="material-symbols-outlined text-xl">star</span>
+					<span class="material-symbols-outlined text-yellow-400 text-xl">label_important</span>
+					<p>PW</p>
+				</div>
+
+				<p class="text-base">Important mail for 2 step verification ccccccccccccc....</p>
+				<p class="text-sm text-gray-600" >15:00</p>
+
+			</div>
+
+	    </div>
+
+
+		<!-- ----------------------right aside bar---------------------------------- -->
+
+		<div class="flex flex-col items-center justify-between pt-6 pb-20 bg-slate-100 h-screen w-16 fixed  right-0 top-[66px] z-20">
+			<div class="space-y-8">
+				<img src="https://www.gstatic.com/companion/icon_assets/calendar_2020q4_2x.png " class="h-5 w-5">
+				<img src="https://www.gstatic.com/companion/icon_assets/keep_2020q4v3_2x.png" class="h-5 w-5">
+				<img src="https://www.gstatic.com/companion/icon_assets/tasks_2021_2x.png" class="h-5 w-5">
+				<img src="https://www.gstatic.com/companion/icon_assets/contacts_2022_2x.png" class="h-5 w-5">
+			</div>
+
+			<div class="space-y-8">
+				<img src="https://fonts.gstatic.com/s/i/googlematerialicons/add/v21/black-24dp/1x/gm_add_black_24dp.png" class="h-5 w-5 ">
+				<img src="https://w7.pngwing.com/pngs/339/623/png-transparent-zoom-app-hd-logo.png" class="h-5 w-5">
+				<span class="material-symbols-outlined text-xl">chevron_right</span>
+			</div>
+			
+		</div>
+
+
+</body>
+</html>
